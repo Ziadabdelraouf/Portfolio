@@ -441,6 +441,66 @@
             display: block;
         }
         
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background-color: var(--secondary);
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-card:hover::before {
+            width: 8px;
+            background-color: var(--accent);
+        }
+        
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover .service-icon {
+            color: var(--accent);
+            transform: scale(1.1);
+        }
+        
+        .service-card h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        .service-card p {
+            color: var(--text-light);
+        }
+        
         /* Projects Section */
         .projects-grid {
             display: grid;
@@ -763,6 +823,7 @@
                         <li><a href="#education">Education</a></li>
                         <li><a href="#skills">Skills</a></li>
                         <li><a href="#experience">Experience</a></li>
+                        <li><a href="#services">Services</a></li>
                         <li><a href="#projects">Projects</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
@@ -777,17 +838,21 @@
         <section class="hero" id="home">
             <div class="container">
                 <div class="hero-content">
-                    <h1>Computer & Communication Engineer</h1>
+                    <h1>Computer & Communication Engineering Student</h1>
                     <p>Backend .NET Developer | Flutter Enthusiast | C++
-                        Programmer</p>
+                        Programmer | Data Engineering Student</p>
                     <p>I'm passionate about building impactful software
                         solutions and continuously expanding my knowledge in
-                        software engineering.</p>
+                        software engineering and data systems.</p>
                     <div class="hero-buttons">
                         <a href="#projects" class="btn btn-primary">View My
                             Work</a>
-                        <a href="#contact" class="btn btn-outline">Contact
-                            Me</a>
+                        <a href="#services" class="btn btn-outline">My
+                            Services</a>
+                        <a
+                            href="https://drive.google.com/file/d/1GKjaPV4oiEgAQCVCOe-G-3KB4fpz7MAn/view?usp=drive_link"
+                            class="btn btn-outline">My
+                            View My Resume</a>
                     </div>
                 </div>
             </div>
@@ -804,15 +869,28 @@
                         <h3>Hello! I'm Ziad Abdelraouf Hassan</h3>
                         <p>I'm a Computer and Communication Engineering student
                             at Cairo University with strong skills in backend
-                            .NET development, Flutter, and C++. I'm experienced
-                            in delivering real-world applications through
-                            academic and personal projects, and I'm currently
-                            completing a software engineering internship.</p>
+                            .NET development, Flutter, C++, and expanding
+                            expertise in
+                            data engineering. I'm experienced in delivering
+                            real-world
+                            applications through academic and personal projects,
+                            and I'm
+                            currently completing a software engineering
+                            internship.</p>
+                        <p>I'm currently enhancing my skills through a
+                            comprehensive
+                            Data Engineering course, learning to design and
+                            implement
+                            robust data pipelines, work with big data
+                            technologies,
+                            and create scalable data solutions.</p>
                         <p>I'm eager to apply my problem-solving abilities,
                             teamwork skills, and technical expertise to build
-                            impactful software solutions while continuously
-                            expanding my knowledge in the software engineering
-                            field.</p>
+                            impactful software and data solutions while
+                            continuously
+                            expanding my knowledge in both software engineering
+                            and
+                            data engineering fields.</p>
                         <p>When I'm not coding, you can find me exploring new
                             technologies, contributing to open-source projects,
                             or expanding my knowledge in emerging tech
@@ -843,6 +921,13 @@
                     <p>Significant Coursework: Data Structures, Algorithms,
                         Database management, Logic design, Operating
                         Systems.</p>
+                </div>
+                <div class="education-item fade-in">
+                    <h3>Data Engineering Course With DEPI</h3>
+                    <span class="date">Currently Enrolled</span>
+                    <p>Comprehensive training in data pipeline development, ETL
+                        processes,
+                        data warehousing, and big data technologies.</p>
                 </div>
             </div>
         </section>
@@ -883,12 +968,29 @@
                         </div>
                     </div>
                     <div class="skill-category fade-in">
+                        <h3>Data Engineering</h3>
+                        <div class="skills-list">
+                            <span class="skill-tag">ETL Processes</span>
+                            <span class="skill-tag">Data Pipelines</span>
+                            <span class="skill-tag">SQL Databases</span>
+                            <span class="skill-tag">NoSQL Databases</span>
+                            <span class="skill-tag">Data Warehousing</span>
+                            <span class="skill-tag">Big Data Technologies</span>
+                            <span class="skill-tag">Data Modeling</span>
+                            <span class="skill-tag">Apache Spark</span>
+                            <span class="skill-tag">Hadoop</span>
+                            <span class="skill-tag">Data Visualization</span>
+                        </div>
+                    </div>
+                    <div class="skill-category fade-in">
                         <h3>Other Technologies</h3>
                         <div class="skills-list">
                             <span class="skill-tag">Linux</span>
                             <span class="skill-tag">Verilog</span>
                             <span class="skill-tag">ModelSim</span>
                             <span class="skill-tag">Azure</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">Kubernetes</span>
                         </div>
                     </div>
                 </div>
@@ -915,6 +1017,77 @@
                             prepared a report with suggested fixes and tools
                         </li>
                     </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Services I Offer</h2>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card fade-in">
+                        <div class="service-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3>Backend Development</h3>
+                        <p>Building robust and scalable backend systems using
+                            .NET framework,
+                            creating RESTful APIs, and implementing secure
+                            authentication systems.</p>
+                    </div>
+                    <div class="service-card fade-in">
+                        <div class="service-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Mobile App Development</h3>
+                        <p>Developing cross-platform mobile applications using
+                            Flutter framework
+                            with responsive designs and seamless user
+                            experiences.</p>
+                    </div>
+                    <div class="service-card fade-in">
+                        <div class="service-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3>Database Design & Management</h3>
+                        <p>Designing efficient database schemas, optimizing
+                            queries, and implementing
+                            database solutions using both SQL and NoSQL
+                            technologies.</p>
+                    </div>
+                    <div class="service-card fade-in">
+                        <div class="service-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Data Engineering</h3>
+                        <p>Designing and implementing ETL pipelines, data
+                            warehousing solutions,
+                            and big data processing systems to transform raw
+                            data into actionable insights.</p>
+                    </div>
+                    <div class="service-card fade-in">
+                        <div class="service-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h3>API Development & Integration</h3>
+                        <p>Creating well-documented APIs and integrating
+                            third-party services
+                            to extend functionality and improve system
+                            capabilities.</p>
+                    </div>
+                    <div class="service-card fade-in">
+                        <div class="service-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h3>Cloud Solutions</h3>
+                        <p>Deploying and managing applications on cloud
+                            platforms like Azure,
+                            implementing cloud-native solutions and scalable
+                            architectures.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -983,6 +1156,7 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
@@ -1014,15 +1188,7 @@
                                         href="mailto:ziadabdelraouff@gmail.com">ziadabdelraouff@gmail.com</a></p>
                             </div>
                         </div>
-                        <div class="contact-item fade-in">
-                            <div class="contact-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div class="contact-text">
-                                <h4>Location</h4>
-                                <p>Hdayek EL-Ahram, Giza, Egypt</p>
-                            </div>
-                        </div>
+
                         <div class="social-links">
                             <a href="https://github.com/Ziadabdelraouf"
                                 target="_blank" class="fade-in"><i
